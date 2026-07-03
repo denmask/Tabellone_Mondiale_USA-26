@@ -3,34 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FIFA World Cup 2026 — Tabellone Round of 32</title>
+<title>FIFA World Cup 2026 — FantaMundial Tabellone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="floodlight"></div>
-
 <header class="masthead">
-  <div class="masthead__eyebrow">FIFA WORLD CUP 26</div>
-  <h1 class="masthead__title">TABELLONE <span>ELIMINAZIONE&nbsp;DIRETTA</span></h1>
-  <p class="masthead__sub">Dai sedicesimi alla finale — New York New Jersey Stadium</p>
-
-  <div class="tonight" id="tonight">
-    <div class="tonight__label"><span class="pulse-dot"></span>STASERA — SI CHIUDONO I SEDICESIMI</div>
-    <div class="tonight__matches" id="tonightMatches"></div>
+  <div class="theme-switch-container">
+    <button id="themeToggle" class="theme-toggle-btn">
+      <span class="icon-sun">☀️ Light Theme</span>
+      <span class="icon-moon">🌙 Dark Theme</span>
+    </button>
   </div>
+
+  <div class="masthead__eyebrow">FIFA WORLD CUP 26 — FANTAMUNDIAL</div>
+  <h1 class="masthead__title">TABELLONE <span>ELIMINAZIONE&nbsp;DIRETTA</span></h1>
 </header>
 
 <main class="bracket" id="bracket">
-  <!-- Rendered by script.js -->
+  <!-- Rendered dynamically by app.js -->
 </main>
-
-<footer class="site-footer">
-  <div class="footer__final" id="footerFinal"></div>
-  <div class="footer__brand">DAZN · OFFICIAL BROADCASTER · FIFA WORLD CUP 26</div>
-</footer>
 
 <script src="app.js"></script>
 </body>

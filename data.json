@@ -3,44 +3,44 @@
   "stage": "Round of 32 → Final",
   "lastUpdated": "2026-07-03",
   "pendingMatches": [
-    { "id": "r32-13", "match": "Australia vs Egitto", "kickoff": "20:00 CET" },
-    { "id": "r32-14", "match": "Argentina vs Capo Verde", "kickoff": "00:00 CET" },
+    { "id": "r32-13", "match": "Argentina vs Capo Verde", "kickoff": "00:00 CET" },
+    { "id": "r32-14", "match": "Australia vs Egitto", "kickoff": "20:00 CET" },
     { "id": "r32-16", "match": "Colombia vs Ghana", "kickoff": "03:30 CET" }
   ],
   "round32": {
     "left": [
-      { "id": "r32-1", "team1": { "name": "Germania", "code": "de" }, "team2": { "name": "Paraguay", "code": "py" }, "winner": "team2" },
-      { "id": "r32-2", "team1": { "name": "Francia", "code": "fr" }, "team2": { "name": "Svezia", "code": "se" }, "winner": "team1" },
-      { "id": "r32-3", "team1": { "name": "Sudafrica", "code": "za" }, "team2": { "name": "Canada", "code": "ca" }, "winner": "team2" },
-      { "id": "r32-4", "team1": { "name": "Olanda", "code": "nl" }, "team2": { "name": "Marocco", "code": "ma" }, "winner": "team2" },
-      { "id": "r32-5", "team1": { "name": "Portogallo", "code": "pt" }, "team2": { "name": "Croazia", "code": "hr" }, "winner": "team1" },
-      { "id": "r32-6", "team1": { "name": "Spagna", "code": "es" }, "team2": { "name": "Austria", "code": "at" }, "winner": "team1" },
-      { "id": "r32-7", "team1": { "name": "Stati Uniti", "code": "us" }, "team2": { "name": "Bosnia", "code": "ba" }, "winner": "team1" },
-      { "id": "r32-8", "team1": { "name": "Belgio", "code": "be" }, "team2": { "name": "Senegal", "code": "sn" }, "winner": "team1" }
+      { "id": "r32-1", "team1": { "name": "Germania", "code": "de", "score": "1 (3)" }, "team2": { "name": "Paraguay", "code": "py", "score": "1 (4)" }, "winner": "team2" },
+      { "id": "r32-2", "team1": { "name": "Francia", "code": "fr", "score": "3" }, "team2": { "name": "Svezia", "code": "se", "score": "0" }, "winner": "team1" },
+      { "id": "r32-3", "team1": { "name": "Sudafrica", "code": "za", "score": "0" }, "team2": { "name": "Canada", "code": "ca", "score": "2" }, "winner": "team2" },
+      { "id": "r32-4", "team1": { "name": "Olanda", "code": "nl", "score": "1 (2)" }, "team2": { "name": "Marocco", "code": "ma", "score": "1 (3)" }, "winner": "team2" },
+      { "id": "r32-5", "team1": { "name": "Portogallo", "code": "pt", "score": "2" }, "team2": { "name": "Croazia", "code": "hr", "score": "1" }, "winner": "team1" },
+      { "id": "r32-6", "team1": { "name": "Spagna", "code": "es", "score": "3" }, "team2": { "name": "Austria", "code": "at", "score": "0" }, "winner": "team1" },
+      { "id": "r32-7", "team1": { "name": "Stati Uniti", "code": "us", "score": "2" }, "team2": { "name": "Bosnia", "code": "ba", "score": "0" }, "winner": "team1" },
+      { "id": "r32-8", "team1": { "name": "Belgio", "code": "be", "score": "3" }, "team2": { "name": "Senegal", "code": "sn", "score": "2" }, "winner": "team1" }
     ],
     "right": [
-      { "id": "r32-9", "team1": { "name": "Brasile", "code": "br" }, "team2": { "name": "Giappone", "code": "jp" }, "winner": "team1" },
-      { "id": "r32-10", "team1": { "name": "Costa d'Avorio", "code": "ci" }, "team2": { "name": "Norvegia", "code": "no" }, "winner": "team2" },
-      { "id": "r32-11", "team1": { "name": "Messico", "code": "mx" }, "team2": { "name": "Ecuador", "code": "ec" }, "winner": "team1" },
-      { "id": "r32-12", "team1": { "name": "Inghilterra", "code": "gb-eng" }, "team2": { "name": "Congo RD", "code": "cd" }, "winner": "team1" },
-      { "id": "r32-13", "team1": { "name": "Argentina", "code": "ar" }, "team2": { "name": "Capo Verde", "code": "cv" }, "winner": null, "pending": true, "kickoff": "00:00 CET" },
-      { "id": "r32-14", "team1": { "name": "Australia", "code": "au" }, "team2": { "name": "Egitto", "code": "eg" }, "winner": null, "pending": true, "kickoff": "20:00 CET" },
-      { "id": "r32-15", "team1": { "name": "Svizzera", "code": "ch" }, "team2": { "name": "Algeria", "code": "dz" }, "winner": "team1" },
-      { "id": "r32-16", "team1": { "name": "Colombia", "code": "co" }, "team2": { "name": "Ghana", "code": "gh" }, "winner": null, "pending": true, "kickoff": "03:30 CET" }
+      { "id": "r32-9", "team1": { "name": "Brasile", "code": "br", "score": "2" }, "team2": { "name": "Giappone", "code": "jp", "score": "1" }, "winner": "team1" },
+      { "id": "r32-10", "team1": { "name": "Costa d'Avorio", "code": "ci", "score": "1" }, "team2": { "name": "Norvegia", "code": "no", "score": "2" }, "winner": "team2" },
+      { "id": "r32-11", "team1": { "name": "Messico", "code": "mx", "score": "2" }, "team2": { "name": "Ecuador", "code": "ec", "score": "0" }, "winner": "team1" },
+      { "id": "r32-12", "team1": { "name": "Inghilterra", "code": "gb-eng", "score": "2" }, "team2": { "name": "Congo RD", "code": "cd", "score": "1" }, "winner": "team1" },
+      { "id": "r32-13", "team1": { "name": "Argentina", "code": "ar", "score": "-" }, "team2": { "name": "Capo Verde", "code": "cv", "score": "-" }, "winner": null, "pending": true },
+      { "id": "r32-14", "team1": { "name": "Australia", "code": "au", "score": "-" }, "team2": { "name": "Egitto", "code": "eg", "score": "-" }, "winner": null, "pending": true },
+      { "id": "r32-15", "team1": { "name": "Svizzera", "code": "ch", "score": "2" }, "team2": { "name": "Algeria", "code": "dz", "score": "0" }, "winner": "team1" },
+      { "id": "r32-16", "team1": { "name": "Colombia", "code": "co", "score": "-" }, "team2": { "name": "Ghana", "code": "gh", "score": "-" }, "winner": null, "pending": true }
     ]
   },
   "round16": {
     "left": [
-      { "id": "r16-1", "team1": { "name": "Paraguay", "code": "py" }, "team2": { "name": "Francia", "code": "fr" }, "winner": null },
-      { "id": "r16-2", "team1": { "name": "Canada", "code": "ca" }, "team2": { "name": "Marocco", "code": "ma" }, "winner": null },
-      { "id": "r16-3", "team1": { "name": "Portogallo", "code": "pt" }, "team2": { "name": "Spagna", "code": "es" }, "winner": null },
-      { "id": "r16-4", "team1": { "name": "Stati Uniti", "code": "us" }, "team2": { "name": "Belgio", "code": "be" }, "winner": null }
+      { "id": "r16-1", "team1": { "name": "Paraguay", "code": "py", "score": "" }, "team2": { "name": "Francia", "code": "fr", "score": "" }, "winner": null },
+      { "id": "r16-2", "team1": { "name": "Canada", "code": "ca", "score": "" }, "team2": { "name": "Marocco", "code": "ma", "score": "" }, "winner": null },
+      { "id": "r16-3", "team1": { "name": "Portogallo", "code": "pt", "score": "" }, "team2": { "name": "Spagna", "code": "es", "score": "" }, "winner": null },
+      { "id": "r16-4", "team1": { "name": "Stati Uniti", "code": "us", "score": "" }, "team2": { "name": "Belgio", "code": "be", "score": "" }, "winner": null }
     ],
     "right": [
-      { "id": "r16-5", "team1": { "name": "Brasile", "code": "br" }, "team2": { "name": "Norvegia", "code": "no" }, "winner": null },
-      { "id": "r16-6", "team1": { "name": "Messico", "code": "mx" }, "team2": { "name": "Inghilterra", "code": "gb-eng" }, "winner": null },
-      { "id": "r16-7", "team1": { "name": "Argentina/Capo Verde", "code": null }, "team2": { "name": "Australia/Egitto", "code": null }, "winner": null, "tbd": true },
-      { "id": "r16-8", "team1": { "name": "Svizzera", "code": "ch" }, "team2": { "name": "Colombia/Ghana", "code": null }, "winner": null, "tbd": true }
+      { "id": "r16-5", "team1": { "name": "Brasile", "code": "br", "score": "" }, "team2": { "name": "Norvegia", "code": "no", "score": "" }, "winner": null },
+      { "id": "r16-6", "team1": { "name": "Messico", "code": "mx", "score": "" }, "team2": { "name": "Inghilterra", "code": "gb-eng", "score": "" }, "winner": null },
+      { "id": "r16-7", "team1": { "name": "Argentina/Capo Verde", "code": null, "score": "" }, "team2": { "name": "Australia/Egitto", "code": null, "score": "" }, "winner": null, "tbd": true },
+      { "id": "r16-8", "team1": { "name": "Svizzera", "code": "ch", "score": "" }, "team2": { "name": "Colombia/Ghana", "code": null, "score": "" }, "winner": null, "tbd": true }
     ]
   },
   "quarterfinal": {
