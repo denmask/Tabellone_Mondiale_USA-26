@@ -13,10 +13,8 @@
   --fanta-coach:#00ffcc;
   --shadow-neon: rgba(0, 255, 204, 0.3);
 
-  --card-gap:18px;
-  --col-w:260px; /* Allargata la colonna per dare spazio ai testi grandi */
-  --col-gap:50px;
-
+  --col-w:260px;
+  --col-gap:45px;
   --font-display:'Bebas Neue', sans-serif;
   --font-body:'Oswald', sans-serif;
   --font-mono:'JetBrains Mono', monospace;
@@ -36,15 +34,8 @@ body.light-theme {
   --shadow-neon: rgba(2, 132, 199, 0.2);
 }
 
-*{box-sizing:border-box; transition: background 0.25s, color 0.25s, border-color 0.25s;}
-html,body{margin:0;padding:0;}
-
-body{
-  background: var(--bg-void);
-  color:var(--text);
-  font-family:var(--font-body);
-  min-height:100vh;
-}
+*{box-sizing:border-box; margin:0; padding:0; transition: background 0.25s, color 0.25s, border-color 0.25s;}
+html,body{width:100%; min-height:100vh; background: var(--bg-void); color:var(--text); font-family:var(--font-body);}
 
 .theme-switch-container {
   position: absolute;
@@ -56,11 +47,11 @@ body{
   background: linear-gradient(180deg, var(--bg-panel), var(--bg-panel-2));
   border: 1px solid var(--line);
   color: var(--text);
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -69,178 +60,178 @@ body:not(.light-theme) .icon-moon { display: none; }
 
 .masthead{
   text-align:center;
-  padding:40px 20px;
+  padding:40px 20px 20px;
   position: relative;
   z-index: 2;
 }
 .masthead__eyebrow{
   font-family:var(--font-mono);
   letter-spacing:0.35em;
-  font-size:14px;
+  font-size:13px;
   color:var(--gold);
   margin-bottom:8px;
 }
 .masthead__title{
   font-family:var(--font-display);
-  font-size:clamp(45px, 6vw, 76px);
+  font-size:clamp(38px, 6vw, 72px);
   line-height:0.95;
-  margin:0;
 }
 .masthead__title span{
   display:block;
   color:transparent;
   -webkit-text-stroke:1.5px var(--gold);
-  font-size:clamp(25px, 3.5vw, 42px);
+  font-size:clamp(22px, 3.5vw, 38px);
   letter-spacing:0.1em;
 }
 
-/* ---------- BRACKET CONTAINER ---------- */
+/* ---------- STRUTTURA A GRIGLIA GENERALE (PC) ---------- */
+.bracket-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 40px;
+  -webkit-overflow-scrolling: touch;
+}
+
 .bracket{
-  display:flex;
-  justify-content:center;
-  align-items:stretch;
-  gap: 0;
-  padding: 20px 40px 80px;
-  overflow-x:auto;
-  position:relative;
-  min-width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, var(--col-w)) 280px repeat(4, var(--col-w));
+  gap: var(--col-gap);
+  padding: 40px;
+  margin: 0 auto;
+  width: max-content;
+  position: relative;
 }
 
-.side{
-  display:flex;
-  gap:var(--col-gap);
+.col {
+  display: grid;
+  position: relative;
 }
 
-.side--center{
-  display:flex;
-  align-items:center;
-  padding:0 40px;
-}
-
-.col{
-  width:var(--col-w);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-around;
-  position:relative;
-}
+/* ALLINEAMENTO MATEMATICO DELLE RIGHE PER UN COPIALINCOLLA GEOMETRICO PERFETTO */
+.col-r32 { grid-template-rows: repeat(8, 1fr); gap: 20px; }
+.col-r16 { grid-template-rows: repeat(4, 1fr); gap: 40px; }
+.col-qf  { grid-template-rows: repeat(2, 1fr); gap: 80px; }
+.col-sf  { grid-template-rows: repeat(1, 1fr); }
+.col-f   { display: flex; align-items: center; justify-content: center; }
 
 .col-label{
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
   text-align:center;
   font-family:var(--font-mono);
-  font-size:14px;
-  letter-spacing:0.2em;
+  font-size:13px;
+  letter-spacing:0.15em;
   color:var(--gold-bright);
   font-weight:700;
-  margin-bottom:20px;
   text-transform: uppercase;
 }
 
-/* COLONNA OTTAVI EVIDENZIATA */
-.col-ottavi-highlight {
-  background: rgba(217, 178, 76, 0.04);
-  border-left: 2px dashed rgba(217,178,76,0.25);
-  border-right: 2px dashed rgba(217,178,76,0.25);
-  padding: 15px 12px;
-  border-radius: 16px;
+.col-ottavi-highlight .match {
+  border-left: 3px solid var(--gold);
 }
 
-/* CARD MATCH POTENZIATA E PIÙ GRANDE */
-.match{
-  background:linear-gradient(135deg, var(--bg-panel), var(--bg-panel-2));
+/* CARD MATCH STRUTTURATA */
+.match {
+  background: linear-gradient(135deg, var(--bg-panel), var(--bg-panel-2));
   border: 2px solid var(--line);
-  border-radius:12px;
-  overflow:hidden;
-  margin: 15px 0;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  height: 94px;
+  align-self: center; /* Forza il centramento verticale della card nella cella di griglia */
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease, border-color 0.25s, box-shadow 0.25s;
 }
 
-/* ANIMAZIONE INTERATTIVA HOVER BELLISSIMA */
 .match:hover{
-  transform: translateY(-5px) scale(1.03);
+  transform: translateY(-4px);
   border-color: var(--gold-bright);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 20px var(--shadow-neon);
-  z-index: 10;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35), 0 0 15px var(--shadow-neon);
 }
 
 .team{
   display:flex; 
   align-items:center; 
-  gap:14px;
-  padding:14px 16px;
-  font-size:17px; /* Ingrandito il testo generale */
+  gap:12px;
+  padding:10px 14px;
+  font-size:15px;
   font-weight:600;
-  border-bottom:1px solid var(--line);
   color:var(--text);
+  height: 47px;
 }
-.team:last-child{border-bottom:none;}
+.team:first-child {
+  border-bottom: 1px solid var(--line);
+}
 
 .team.is-winner{
-  background: linear-gradient(90deg, rgba(217,178,76,0.18), transparent);
-  color: var(--text);
-}
-
-.col-ottavi-highlight .team.is-winner {
-  background: linear-gradient(90deg, rgba(0, 255, 204, 0.15), transparent);
-  border-left: 4px solid var(--gold);
+  background: linear-gradient(90deg, rgba(217,178,76,0.15), transparent);
 }
 
 .team img.flag{
-  width:28px; /* Bandiere più visibili */
-  height:19px;
+  width:24px;
+  height:16px;
   object-fit:cover;
-  border-radius:3px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius:2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .team .name-container {
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow: hidden;
+}
+
+.team .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .team .fanta-coach {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10px;
   color: var(--fanta-coach);
   text-transform: uppercase;
-  margin-top: 2px;
-  letter-spacing: 0.05em;
+  margin-top: 1px;
 }
 
-/* DISPLAY DEL PUNTEGGIO FISSO EMESSO DA CODICE */
 .team-score {
   font-family: var(--font-mono);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--gold-bright);
   margin-left: auto;
-  padding-left: 10px;
 }
 
-/* FINALE CARD */
+/* FINALE CARD CENTRALE */
 .final-card{
-  width:260px;
-  background: var(--bg-panel);
+  width: 100%;
+  background: linear-gradient(180deg, var(--bg-panel-2), var(--bg-panel));
   border:3px solid var(--gold);
   border-radius:16px;
-  padding:24px 18px;
+  padding:20px 16px;
   text-align:center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
 .final-card__eyebrow{
   font-family:var(--font-mono);
-  font-size:13px;
+  font-size:12px;
   letter-spacing:0.2em;
   color:var(--gold);
-  margin-bottom:14px;
+  margin-bottom:12px;
   font-weight: bold;
 }
 .final-card__meta{
-  margin-top:14px;
+  margin-top:12px;
   font-family:var(--font-mono);
-  font-size:12px;
+  font-size:11px;
   color:var(--text-dim);
 }
 
@@ -249,5 +240,54 @@ body:not(.light-theme) .icon-moon { display: none; }
   top:0; left:0;
   width:100%; height:100%;
   pointer-events:none;
-  z-index:0;
+  z-index:1;
+}
+.connectors path{
+  fill:none;
+  stroke:var(--line);
+  stroke-width:2;
+}
+
+/* ==========================================================================
+   SISTEMA RESPONSIVE 100% PER CELLULARI (INVERSIONE IN VERTICALE ORDINATA)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .bracket-wrapper {
+    overflow-x: hidden;
+    padding: 10px;
+  }
+  .bracket {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 20px 10px;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .col-label {
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+    background: var(--bg-panel-2);
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+  }
+  .match {
+    height: auto;
+    align-self: stretch;
+  }
+  .connectors {
+    display: none; /* Rimuove i vettori su mobile perché le card diventano una lista ordinata sequenziale */
+  }
+  .final-card {
+    width: 100%;
+  }
 }

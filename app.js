@@ -52,7 +52,6 @@ function teamRow(team, { isWinner = false, isTbd = false } = {}){
   }
   wrap.appendChild(nameContainer);
 
-  // Inserimento statico del punteggio recuperato dal JSON
   if (team.score !== undefined && team.score !== "") {
     const scoreDisp = document.createElement("span");
     scoreDisp.className = "team-score";
@@ -83,9 +82,9 @@ function matchCard(match){
   return card;
 }
 
-function buildColumn(matches, label){
+function buildColumn(matches, label, gridClass){
   const col = document.createElement("div");
-  col.className = "col";
+  col.className = `col ${gridClass}`;
   
   if (label === "OTTAVI") {
     col.className += " col-ottavi-highlight";
@@ -129,29 +128,23 @@ function render(data){
   svg.setAttribute("class", "connectors");
   bracket.appendChild(svg);
 
-  // LATO SINISTRO COMPLETO: Sedicesimi -> Ottavi -> Quarti -> Semifinale
-  const left = document.createElement("div");
-  left.className = "side side--left";
-  left.appendChild(buildColumn(data.round32.left, "SEDICESIMI"));
-  left.appendChild(buildColumn(data.round16.left, "OTTAVI"));
-  left.appendChild(buildColumn(data.quarterfinal.left, "QUARTI"));
-  left.appendChild(buildColumn(data.semifinal.left, "SEMIFINALE"));
-  bracket.appendChild(left);
+  // INIEZIONE COLONNE LATO SINISTRO (Sfruttando le classi Griglia Geometriche)
+  bracket.appendChild(buildColumn(data.round32.left, "SEDICESIMI", "col-r32"));
+  bracket.appendChild(buildColumn(data.round16.left, "OTTAVI", "col-r16"));
+  bracket.appendChild(buildColumn(data.quarterfinal.left, "QUARTI", "col-qf"));
+  bracket.appendChild(buildColumn(data.semifinal.left, "SEMIFINALE", "col-sf"));
 
-  // CENTRO
-  const center = document.createElement("div");
-  center.className = "side side--center";
-  center.appendChild(buildFinalCard(data.final));
-  bracket.appendChild(center);
+  // CENTRO FINALE
+  const centerCol = document.createElement("div");
+  centerCol.className = "col col-f";
+  centerCol.appendChild(buildFinalCard(data.final));
+  bracket.appendChild(centerCol);
 
-  // LATO DESTRO SPECULARE
-  const right = document.createElement("div");
-  right.className = "side side--right";
-  right.appendChild(buildColumn(data.semifinal.right, "SEMIFINALE"));
-  right.appendChild(buildColumn(data.quarterfinal.right, "QUARTI"));
-  right.appendChild(buildColumn(data.round16.right, "OTTAVI"));
-  right.appendChild(buildColumn(data.round32.right, "SEDICESIMI"));
-  bracket.appendChild(right);
+  // INIEZIONE COLONNE LATO DESTRO (Speculari e bilanciate)
+  bracket.appendChild(buildColumn(data.semifinal.right, "SEMIFINALE", "col-sf"));
+  bracket.appendChild(buildColumn(data.quarterfinal.right, "QUARTI", "col-qf"));
+  bracket.appendChild(buildColumn(data.round16.right, "OTTAVI", "col-r16"));
+  bracket.appendChild(buildColumn(data.round32.right, "SEDICESIMI", "col-r32"));
 
   requestAnimationFrame(() => requestAnimationFrame(() => drawConnectors(data, svg, bracket)));
 }
@@ -196,6 +189,8 @@ function connectRound(idsA, idsB, mirrored, svg, bracketRect){
 }
 
 function drawConnectors(data, svg, bracket){
+  if (window.innerWidth <= 1200) return; // Disattiva i connettori su mobile per evitare bug visivi
+  
   const rect = bracket.getBoundingClientRect();
   svg.setAttribute("width", bracket.scrollWidth);
   svg.setAttribute("height", bracket.scrollHeight);
@@ -210,8 +205,8 @@ function drawConnectors(data, svg, bracket){
 
   connectRound(idsOf(data.round32.right), idsOf(data.round16.right), true, svg, rect);
   connectRound(idsOf(data.round16.right), idsOf(data.quarterfinal.right), true, svg, rect);
-  connectRound(idsOf(data.quarterfinal.right), idsOf(data.semifinal.right), true, svg, rect);
-  connectRound(idsOf(data.semifinal.right), [data.final.id], true, svg, rect);
+  connectRound(data.quarterfinal.right.map(m => m.id), data.semifinal.right.map(m => m.id), true, svg, rect);
+  connectRound(data.semifinal.right.map(m => m.id), [data.final.id], true, svg, rect);
 }
 
 async function loadData(){
