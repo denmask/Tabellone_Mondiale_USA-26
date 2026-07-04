@@ -23,10 +23,10 @@
       { "id": "r32-10", "team1": { "name": "Costa d'Avorio", "code": "ci", "score": "1" }, "team2": { "name": "Norvegia", "code": "no", "score": "2" }, "winner": "team2" },
       { "id": "r32-11", "team1": { "name": "Messico", "code": "mx", "score": "2" }, "team2": { "name": "Ecuador", "code": "ec", "score": "0" }, "winner": "team1" },
       { "id": "r32-12", "team1": { "name": "Inghilterra", "code": "gb-eng", "score": "2" }, "team2": { "name": "Congo RD", "code": "cd", "score": "1" }, "winner": "team1" },
-      { "id": "r32-13", "team1": { "name": "Argentina", "code": "ar", "score": "-" }, "team2": { "name": "Capo Verde", "code": "cv", "score": "-" }, "winner": "team1", "pending": true },
-      { "id": "r32-14", "team1": { "name": "Australia", "code": "au", "score": "-" }, "team2": { "name": "Egitto", "code": "eg", "score": "-" }, "winner": "team2", "pending": true },
+      { "id": "r32-13", "team1": { "name": "Argentina", "code": "ar", "score": "3" }, "team2": { "name": "Capo Verde", "code": "cv", "score": "2" }, "winner": "team1", "pending": true },
+      { "id": "r32-14", "team1": { "name": "Australia", "code": "au", "score": "3" }, "team2": { "name": "Egitto", "code": "eg", "score": "5" }, "winner": "team2", "pending": true },
       { "id": "r32-15", "team1": { "name": "Svizzera", "code": "ch", "score": "2" }, "team2": { "name": "Algeria", "code": "dz", "score": "0" }, "winner": "team1" },
-      { "id": "r32-16", "team1": { "name": "Colombia", "code": "co", "score": "-" }, "team2": { "name": "Ghana", "code": "gh", "score": "-" }, "winner": "team1", "pending": true }
+      { "id": "r32-16", "team1": { "name": "Colombia", "code": "co", "score": "1" }, "team2": { "name": "Ghana", "code": "gh", "score": "0" }, "winner": "team1", "pending": true }
     ]
   },
   "round16": {
