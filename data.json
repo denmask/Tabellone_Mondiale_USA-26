@@ -31,14 +31,14 @@
   },
   "round16": {
     "left": [
-      { "id": "r16-1", "team1": { "name": "Paraguay", "code": "py", "score": "" }, "team2": { "name": "Francia", "code": "fr", "score": "" }, "winner": null },
-      { "id": "r16-2", "team1": { "name": "Canada", "code": "ca", "score": "" }, "team2": { "name": "Marocco", "code": "ma", "score": "" }, "winner": null },
+      { "id": "r16-1", "team1": { "name": "Paraguay", "code": "py", "score": "0" }, "team2": { "name": "Francia", "code": "fr", "score": "1" }, "winner": "team2" },
+      { "id": "r16-2", "team1": { "name": "Canada", "code": "ca", "score": "0" }, "team2": { "name": "Marocco", "code": "ma", "score": "3" }, "winner": "team2" },
       { "id": "r16-3", "team1": { "name": "Portogallo", "code": "pt", "score": "" }, "team2": { "name": "Spagna", "code": "es", "score": "" }, "winner": null },
       { "id": "r16-4", "team1": { "name": "Stati Uniti", "code": "us", "score": "" }, "team2": { "name": "Belgio", "code": "be", "score": "" }, "winner": null }
     ],
     "right": [
-      { "id": "r16-5", "team1": { "name": "Brasile", "code": "br", "score": "" }, "team2": { "name": "Norvegia", "code": "no", "score": "" }, "winner": null },
-      { "id": "r16-6", "team1": { "name": "Messico", "code": "mx", "score": "" }, "team2": { "name": "Inghilterra", "code": "gb-eng", "score": "" }, "winner": null },
+      { "id": "r16-5", "team1": { "name": "Brasile", "code": "br", "score": "1" }, "team2": { "name": "Norvegia", "code": "no", "score": "2" }, "winner": "team2"},
+      { "id": "r16-6", "team1": { "name": "Messico", "code": "mx", "score": "2" }, "team2": { "name": "Inghilterra", "code": "gb-eng", "score": "3" }, "winner": "team2" },
       { "id": "r16-7", "team1": { "name": "Argentina", "code": "ar", "score": "" }, "team2": { "name": "Egitto", "code": "eg", "score": "" }, "winner": null, "tbd": true },
       { "id": "r16-8", "team1": { "name": "Svizzera", "code": "ch", "score": "" }, "team2": { "name": "Colombia", "code": "co", "score": "" }, "winner": null, "tbd": true }
     ]
@@ -49,7 +49,7 @@
       { "id": "qf-2", "team1": { "name": "Spagna", "code": "es" }, "team2": { "name": "Belgio", "code": "be" }, "winner": null }
     ],
     "right": [
-      { "id": "qf-3", "team1": { "name": "Brasile", "code": "br" }, "team2": { "name": "Inghilterra", "code": "gb-eng" }, "winner": null },
+      { "id": "qf-3", "team1": { "name": "Norvegia", "code": "no" }, "team2": { "name": "Inghilterra", "code": "gb-eng" }, "winner": null },
       { "id": "qf-4", "team1": { "name": "Argentina", "code": "ar" }, "team2": { "name": "Colombia", "code": "co" }, "winner": null }
     ]
   },
@@ -58,7 +58,7 @@
       { "id": "sf-1", "team1": { "name": "Francia", "code": "fr" }, "team2": { "name": "Spagna", "code": "es" }, "winner": null }
     ],
     "right": [
-      { "id": "sf-2", "team1": { "name": "Brasile", "code": "br" }, "team2": { "name": "Argentina", "code": "ar" }, "winner": null }
+      { "id": "sf-2", "team1": { "name": "Norvegia", "code": "no" }, "team2": { "name": "Argentina", "code": "ar" }, "winner": null }
     ]
   },
   "final": {
