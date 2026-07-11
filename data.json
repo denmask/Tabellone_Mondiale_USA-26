@@ -46,7 +46,7 @@
   "quarterfinal": {
     "left": [
       { "id": "qf-1", "team1": { "name": "Francia", "code": "fr", "score": "2" }, "team2": { "name": "Marocco", "code": "ma", "score": "0" }, "winner": "FRANCIA" },
-      { "id": "qf-2", "team1": { "name": "Spagna", "code": "es" }, "team2": { "name": "Belgio", "code": "be" }, "winner": null }
+      { "id": "qf-2", "team1": { "name": "Spagna", "code": "es", "score": "2"}, "team2": { "name": "Belgio", "code": "be", "score": "1" }, "winner": "SPAGNA" }
     ],
     "right": [
       { "id": "qf-3", "team1": { "name": "Norvegia", "code": "no" }, "team2": { "name": "Inghilterra", "code": "gb-eng" }, "winner": null },
