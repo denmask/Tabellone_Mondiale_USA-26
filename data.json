@@ -49,8 +49,8 @@
       { "id": "qf-2", "team1": { "name": "Spagna", "code": "es", "score": "2"}, "team2": { "name": "Belgio", "code": "be", "score": "1" }, "winner": "SPAGNA" }
     ],
     "right": [
-      { "id": "qf-3", "team1": { "name": "Norvegia", "code": "no" }, "team2": { "name": "Inghilterra", "code": "gb-eng" }, "winner": null },
-      { "id": "qf-4", "team1": { "name": "Argentina", "code": "ar" }, "team2": { "name": "Svizzera", "code": "ch" }, "winner": null }
+      { "id": "qf-3", "team1": { "name": "Norvegia", "code": "no", "score": "1" }, "team2": { "name": "Inghilterra", "code": "gb-eng", "score": "2" }, "winner": "INGHILTERRA" },
+      { "id": "qf-4", "team1": { "name": "Argentina", "code": "ar", "score": "3" }, "team2": { "name": "Svizzera", "code": "ch", "score": "1" }, "winner": "ARGENTINA" }
     ]
   },
   "semifinal": {
@@ -58,7 +58,7 @@
       { "id": "sf-1", "team1": { "name": "Francia", "code": "fr" }, "team2": { "name": "Spagna", "code": "es" }, "winner": null }
     ],
     "right": [
-      { "id": "sf-2", "team1": { "name": "Norvegia", "code": "no" }, "team2": { "name": "Argentina", "code": "ar" }, "winner": null }
+      { "id": "sf-2", "team1": { "name": "Inghilterra", "code": "gb-eng" }, "team2": { "name": "Argentina", "code": "ar" }, "winner": null }
     ]
   },
   "final": {
