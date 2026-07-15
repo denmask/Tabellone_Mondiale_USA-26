@@ -55,7 +55,7 @@
   },
   "semifinal": {
     "left": [
-      { "id": "sf-1", "team1": { "name": "Francia", "code": "fr" }, "team2": { "name": "Spagna", "code": "es" }, "winner": null }
+      { "id": "sf-1", "team1": { "name": "Francia", "code": "fr", "score": "0" }, "team2": { "name": "Spagna", "code": "es", "score": "2" }, "winner": "SPAGNA" }
     ],
     "right": [
       { "id": "sf-2", "team1": { "name": "Inghilterra", "code": "gb-eng" }, "team2": { "name": "Argentina", "code": "ar" }, "winner": null }
@@ -63,7 +63,7 @@
   },
   "final": {
     "id": "final",
-    "team1": { "name": "TBD", "code": null },
+    "team1": { "name": "SPAGNA", "code": "es" },
     "team2": { "name": "TBD", "code": null },
     "winner": null,
     "date": "Sabato 19 luglio",
