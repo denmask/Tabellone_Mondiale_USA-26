@@ -58,15 +58,15 @@
       { "id": "sf-1", "team1": { "name": "Francia", "code": "fr", "score": "0" }, "team2": { "name": "Spagna", "code": "es", "score": "2" }, "winner": "SPAGNA" }
     ],
     "right": [
-      { "id": "sf-2", "team1": { "name": "Inghilterra", "code": "gb-eng" }, "team2": { "name": "Argentina", "code": "ar" }, "winner": null }
+      { "id": "sf-2", "team1": { "name": "Inghilterra", "code": "gb-eng", "score": "1" }, "team2": { "name": "Argentina", "code": "ar", "score": "2" }, "winner": "ARGENTINA"}
     ]
   },
   "final": {
     "id": "final",
-    "team1": { "name": "SPAGNA", "code": "es" },
-    "team2": { "name": "TBD", "code": null },
+    "team1": { "name": "SPAGNA", "code": "es", "score": "" },
+    "team2": { "name": "ARGENTINA", "code": "ar", "score": "" },
     "winner": null,
-    "date": "Sabato 19 luglio",
+    "date": "Domenica 19 luglio",
     "time": "21:00 CET",
     "venue": "New York New Jersey Stadium"
   }
