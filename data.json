@@ -63,9 +63,9 @@
   },
   "final": {
     "id": "final",
-    "team1": { "name": "SPAGNA", "code": "es", "score": "" },
-    "team2": { "name": "ARGENTINA", "code": "ar", "score": "" },
-    "winner": null,
+    "team1": { "name": "SPAGNA", "code": "es", "score": "1" },
+    "team2": { "name": "ARGENTINA", "code": "ar", "score": "0" },
+    "winner": "SPAGNA",
     "date": "Domenica 19 luglio",
     "time": "21:00 CET",
     "venue": "New York New Jersey Stadium"
